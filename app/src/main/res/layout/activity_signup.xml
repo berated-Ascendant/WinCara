@@ -24,12 +24,12 @@
             android:src="@drawable/logo" />
 
             <EditText
-            android:id="@+id/fname_input"
+            android:id="@+id/username_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_corner"
-            android:hint="@string/fname_input"
+            android:hint="Username"
             android:importantForAutofill="no"
             android:inputType="text"
             android:padding="12dp"
@@ -37,19 +37,7 @@
             android:textColorHint="@color/white"
             android:textSize="12sp" />
 
-            <EditText
-            android:id="@+id/lname_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="@string/lname_input"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:padding="12dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="12sp" />
+
 
             <EditText
             android:id="@+id/password_input"
@@ -112,7 +100,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/dp_id"
+                    android:id="@+id/department_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
