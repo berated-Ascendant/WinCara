@@ -9,9 +9,9 @@ import android.widget.EditText
 import android.widget.Toast
 import kotlin.math.sign
 
-private lateinit var signupbtn: Button
+        private lateinit var signupbtn: Button
         private lateinit var username: EditText
-        private lateinit var passwrd: EditText
+        private lateinit var password: EditText
         private lateinit var usergender: EditText
         private lateinit var department: EditText
         private lateinit var db: DBHelper
@@ -22,7 +22,8 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
 
         username = findViewById(R.id.username_input)
-        passwrd = findViewById(R.id.password_input)
+        password = findViewById(R.id.password_input)
+        usergender = findViewById(R.id.gender_input)
         department = findViewById(R.id.department_id)
         signupbtn = findViewById(R.id.sign_up)
         db = DBHelper(this)
@@ -30,10 +31,13 @@ class SignupActivity : AppCompatActivity() {
 
         signupbtn.setOnClickListener{
             val usernametext = username.text.toString()
-            val passwordtext = passwrd.text.toString()
-            val departmenttxt = department.text.toString()
+            val passwordtext = password.text.toString()
+            val gendertext = usergender.text.toString()
+            val departmenttext = department.text.toString()
+            val savedata = db.addUSer(usernametext,passwordtext,gendertext,departmenttext)
 
-            if(TextUtils.isEmpty(usernametext) || TextUtils.isEmpty(passwordtext)|| TextUtils.isEmpty(departmenttxt)){
+
+            if(TextUtils.isEmpty(usernametext) || TextUtils.isEmpty(passwordtext)|| TextUtils.isEmpty(departmenttext)){
                 Toast.makeText(this,"Please add your username, password and department", Toast.LENGTH_SHORT).show()
             }
             else{

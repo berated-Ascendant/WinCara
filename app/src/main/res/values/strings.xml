@@ -12,4 +12,6 @@
     <string name="Sign_up_btn">Sign up</string>
     <string name="fname_input">First Name</string>
     <string name="lname_input">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="department">Department</string>
 </resources>

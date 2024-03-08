@@ -25,7 +25,7 @@
             android:src="@drawable/logo" />
 
         <EditText
-            android:id="@+id/username_input"
+            android:id="@+id/login_username_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -39,7 +39,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/password_input"
+            android:id="@+id/login_password_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

@@ -13,23 +13,39 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,null,D
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        db?.execSQL("create table users (user_name TEXT primary key, user_password TEXT, user_gender TEXT, user_department TEXT)")
+        db?.execSQL("create table users (username TEXT primary key, password TEXT, usergender TEXT, department TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("drop table if exists users")
     }
 
-    fun addUSer(user_name: String, user_password: String, user_gender: String, user_department:String){
+    fun addUSer(username: String, password: String, usergender: String, department:String): Boolean {
         val db = this.writableDatabase
         val cv = ContentValues().apply {
-            put("username", user_name)
-            put("passwrd", user_password)
-            put("user_gender", user_gender)
-            put("department", user_department)
+            put("username", username)
+            put("password", password)
+            put("usergender", usergender)
+            put("department", department)
 
         }
         val result = db.insert("users", null, cv)
+        if(result == -1.toLong()){
+            return false
+        }
+        return true
+    }
+
+    fun checkuserpass(username: String, password: String ): Boolean {
+        val db = this.writableDatabase
+        val query = "select * from users where username = '$username' and password = '$password'"
+        val cursor = db.rawQuery(query,null)
+        if (cursor.count <= 0){
+            cursor.close()
+            return false
+        }
+        cursor.close()
+        return true
     }
 
 }

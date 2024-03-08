@@ -46,79 +46,46 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_corner"
             android:hint="@string/password_input"
-            android:importantForAutofill="no"
+            android:importantForAutofill="yes"
             android:inputType="textPassword"
             android:padding="12dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="12sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/gender_input"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gender"
-                android:textColor = "@color/white"
-                android:layout_gravity="left"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/gender"
+                android:importantForAutofill="no"
                 android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
                 />
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <EditText
+                android:id="@+id/department_id"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:id="@+id/male_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="92dp"
-
-
-                    android:buttonTint="#EFE7E7"
-                    android:text="Male"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/female_id"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <CheckBox
-                    android:id="@+id/female_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="65dp"
-
-                    android:layout_marginEnd="96dp"
-                    android:layout_marginBottom="21dp"
-                    android:buttonTint="#F3E8E8"
-                    android:text="Female"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toTopOf="@+id/department_id"
-                    app:layout_constraintEnd_toStartOf="@+id/male_id"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/department_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginBottom="140dp"
-                    android:background="@drawable/rounded_corner"
-                    android:hint="Department"
-                    android:importantForAutofill="no"
-                    android:inputType="text"
-                    android:padding="12dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/female_id"
-                    tools:layout_editor_absoluteX="0dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="140dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/department"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                 />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <View
                 android:layout_width="match_parent"
