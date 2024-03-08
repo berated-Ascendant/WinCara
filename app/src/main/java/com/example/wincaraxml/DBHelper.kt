@@ -23,10 +23,10 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,null,D
     fun addUSer(user_name: String, user_password: String, user_gender: String, user_department:String){
         val db = this.writableDatabase
         val cv = ContentValues().apply {
-            put("user_name", user_name)
-            put("user_password", user_password)
+            put("username", user_name)
+            put("passwrd", user_password)
             put("user_gender", user_gender)
-            put("user_department", user_department)
+            put("department", user_department)
 
         }
         val result = db.insert("users", null, cv)

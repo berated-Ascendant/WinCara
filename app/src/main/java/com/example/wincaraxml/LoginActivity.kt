@@ -9,9 +9,9 @@ import android.content.Intent
 
 class LoginActivity : AppCompatActivity() {
 
-
-
-
+    private lateinit var loginbtn:Button
+    private lateinit var edituser: EditText
+    private lateinit var editpasswrd: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
