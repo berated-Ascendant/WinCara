@@ -25,7 +25,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,null,D
         val cv = ContentValues().apply {
             put("username", username)
             put("password", password)
-            put("usergender", usergender)
+            put("selectedGender", usergender)
             put("department", department)
 
         }
